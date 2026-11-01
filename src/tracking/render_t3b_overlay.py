@@ -57,6 +57,8 @@ def draw_frame(f, fi, rows, seen):
     held = fi - key
     status = {}
     for r in rows:
+        if r["state"] == "none" or any(r[c] == "" for c in ("x1", "y1", "x2", "y2")):      # a row with no box has nothing to draw
+            continue
         box = [int(float(r[c]) * K) for c in ("x1", "y1", "x2", "y2")]
         tid = int(r["id"]) if r["id"] != "" else None
         col = COLORS.get(tid, GREY) if tid is not None else GREY
@@ -107,23 +109,36 @@ def draw_frame(f, fi, rows, seen):
 
 
 def main(out: str = DEFAULT_OUT) -> None:
-    if Path(out).exists():
-        raise SystemExit(f"refusing to overwrite {out}")
     by = load()
-    cap = cv2.VideoCapture(VIDEO)
-    cap.set(cv2.CAP_PROP_POS_FRAMES, START)
-    vw = cv2.VideoWriter(out, cv2.VideoWriter_fourcc(*"mp4v"), 24, (W, H))
-    seen: set[int] = set()
-    for fi in range(START, END):
-        ok, f = cap.read()
-        if not ok:
-            raise SystemExit(f"source video ended at frame {fi}")
-        f = cv2.resize(f, (W, H), interpolation=cv2.INTER_AREA)
-        key = START + ((fi - START) // STEP) * STEP
-        st = draw_frame(f, fi, by.get(key, []), seen)
-        seen |= {t for t, s in st.items() if not s.startswith("NO ESTIMATE")}
-        vw.write(f)
-    vw.release()
+    Path(out).parent.mkdir(parents=True, exist_ok=True)
+    try:
+        open(out, "xb").close()                         # exclusive create: refuses to overwrite and reserves the path against a concurrent run
+    except FileExistsError:
+        raise SystemExit(f"refusing to overwrite {out}")
+    vw = None
+    done = False
+    try:
+        cap = cv2.VideoCapture(VIDEO)
+        cap.set(cv2.CAP_PROP_POS_FRAMES, START)
+        vw = cv2.VideoWriter(out, cv2.VideoWriter_fourcc(*"mp4v"), 24, (W, H))
+        if not vw.isOpened():
+            raise SystemExit(f"cannot open video writer for {out}")
+        seen: set[int] = set()
+        for fi in range(START, END):
+            ok, f = cap.read()
+            if not ok:
+                raise SystemExit(f"source video ended at frame {fi}")
+            f = cv2.resize(f, (W, H), interpolation=cv2.INTER_AREA)
+            key = START + ((fi - START) // STEP) * STEP
+            st = draw_frame(f, fi, by.get(key, []), seen)
+            seen |= {t for t, s in st.items() if not s.startswith("NO ESTIMATE")}
+            vw.write(f)
+        done = True
+    finally:
+        if vw is not None:
+            vw.release()
+        if not done:
+            Path(out).unlink(missing_ok=True)           # never leave a partial video that blocks the retry
     print("wrote", out)
 
 

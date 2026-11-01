@@ -7,6 +7,7 @@ Usage: python -m src.tracking.make_task4_preview_gif [out.gif] [width]
 from __future__ import annotations
 
 import hashlib
+import os
 import sys
 from pathlib import Path
 
@@ -38,7 +39,12 @@ def main(out: str = DEFAULT_OUT, width: int = 640) -> None:
     pal = mosaic.quantize(colors=112, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE)
     q = [f.quantize(palette=pal, dither=Image.Dither.FLOYDSTEINBERG) for f in frames]
     Path(out).parent.mkdir(parents=True, exist_ok=True)
-    q[0].save(out, save_all=True, append_images=q[1:], duration=int(1000 / 8), loop=0, optimize=True, disposal=1)
+    tmp = Path(f"{out}.{os.getpid()}.tmp")                # write privately, then replace atomically so a concurrent run never leaves a half-written GIF
+    try:
+        q[0].save(tmp, format="GIF", save_all=True, append_images=q[1:], duration=int(1000 / 8), loop=0, optimize=True, disposal=1)
+        os.replace(tmp, out)
+    finally:
+        tmp.unlink(missing_ok=True)
     print(out, Path(out).stat().st_size, "bytes;", len(q), "frames;", f"{width}x{h}", "; source sha256", hashlib.sha256(Path(SRC).read_bytes()).hexdigest())
 
 
