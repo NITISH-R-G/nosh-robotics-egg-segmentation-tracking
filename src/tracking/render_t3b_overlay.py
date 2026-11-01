@@ -109,6 +109,10 @@ def draw_frame(f, fi, rows, seen):
 
 
 def main(out: str = DEFAULT_OUT) -> None:
+    root = (Path.cwd() / "outputs").resolve()
+    out = str((Path.cwd() / out).resolve())
+    if root not in Path(out).parents:                  # output must stay inside ./outputs (no path traversal from the command line)
+        raise SystemExit(f"output must be inside {root}")
     by = load()
     Path(out).parent.mkdir(parents=True, exist_ok=True)
     try:
