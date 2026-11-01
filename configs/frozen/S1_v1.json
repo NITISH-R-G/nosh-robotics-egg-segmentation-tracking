@@ -1,0 +1,75 @@
+{
+ "artifact_sha256": "a6e46871795be95ef723192ecc610ba00dd9b8cd60d2403a89b81565e77c6a07",
+ "candidate_cache_hashes": {
+  "candidates.jsonl": "126024a4488d6dee2aacafc37e522db738d7fb08f3d3045203ad399ea07b7696",
+  "run.json": "b6f6409a5daab19625d9f5e10769f15935b8c1f81ba32c2c393e4f884b5d9735"
+ },
+ "environment": {
+  "platform": "Windows-11-10.0.26220-SP0",
+  "python": "3.12.3",
+  "requirements_lock_sha256": "2e8396053a57cee7bcf98ee7fac7d6ee17fe536b874c4f486cc12d242e20980f",
+  "torch": "2.11.0+cu128"
+ },
+ "evidence_sha256": {
+  "data/split_manifest.csv": "d971faeccbdcb3f945c652f8490e0a2058d13f01a8fb00fad1fe4a00a4f343e8",
+  "experiments/final_evaluation_protocol.md": "ad1bf9b671b0856153366bb8e9c6fd88e9580597992f033144646033f92934e3",
+  "outputs/sam_candidates/audit.json": "3ae49b32f109a6aabb030faa14d8b0ebe2a8d2727595cd6452b9ac359c36a04e",
+  "outputs/sam_candidates/candidates.jsonl": "126024a4488d6dee2aacafc37e522db738d7fb08f3d3045203ad399ea07b7696"
+ },
+ "kind": "pretrained SAM candidates + feature selector",
+ "label_caveat": "evidence labels are AI-assisted and unverified by a human; reference masks are SAM-derived pseudo-ground-truth",
+ "name": "S1_v1",
+ "pipeline": [
+  "SAM ViT-B SamAutomaticMaskGenerator on the original RGB image (no resize/preprocessing beyond SAM's own)",
+  "candidate features (predicted_iou, stability, solidity, aspect, ellipse_iou, area) from the cached candidates",
+  "gates + NMS in src/segmentation/selector.py; fallback='review' only FLAGS images with no selection (selections identical to S1)"
+ ],
+ "sam": {
+  "checkpoint": "models/sam_vit_b_01ec64.pth",
+  "checkpoint_sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+  "device_at_cache_time": "cuda",
+  "generator": {
+   "box_nms_thresh": 0.7,
+   "crop_n_layers": 0,
+   "min_mask_region_area": 0,
+   "points_per_side": 32,
+   "pred_iou_thresh": 0.5,
+   "stability_score_thresh": 0.5
+  },
+  "model": "sam_vit_b",
+  "torch_at_cache_time": "2.11.0+cu128"
+ },
+ "selected_on": "88 development images only (selector_log.csv, fallback_evaluation.md); thresholds are fixed hypotheses",
+ "selector": {
+  "alts": [],
+  "border_min_area_frac": null,
+  "border_min_ellipse_iou": null,
+  "fallback": "review",
+  "fallback_alts": [],
+  "max_area_frac": 0.6,
+  "max_aspect": 2.0,
+  "min_area_frac": 0.01,
+  "min_ellipse_iou": 0.93,
+  "min_pred_iou": 0.9,
+  "min_rel_area": null,
+  "min_solidity": 0.95,
+  "min_stability": 0.9,
+  "name": "S1_conservative_plus_review_flag",
+  "nms_contain": 0.8,
+  "nms_iou": 0.5,
+  "relaxed_min_ellipse_iou": 0.8,
+  "relaxed_min_pred_iou": 0.75
+ },
+ "selector_sha256": "e676d89c8b4ecd8b83f5a5994018ce9f23a58331d3601713ef4379106e1f6dae",
+ "source_files_sha256": {
+  "src/evaluation/metrics.py": "3f270109ca44706a1b750dfc81fa97cd9f55ab043f827a2f21e1f1d12005aa72",
+  "src/experiments/final_eval.py": "7478fa4e6f3a68e51369d5452703c55ebae9363c34c11849f709a4c0d58709b9",
+  "src/segmentation/cache_candidates.py": "c2cc8e732237d5b27fc9ab6e2cc5141d4a9b1b416fbd5225961fa5c4e268c449",
+  "src/segmentation/frozen.py": "e5b5ea84fa8e728c86fdb4ef4c22bab5470e1e0c225c89911bd15ce7326b6e37",
+  "src/segmentation/make_reference.py": "8e0ae59fb54a5e427959f712df008abf83ad621c51c818558c002ba1b68f5545",
+  "src/segmentation/masks.py": "cb75c61e829d52de24870c7bd9f6f7f6994b32406cdbd61578f36aa0ef3067c7",
+  "src/segmentation/sam_segmenter.py": "539f7a1ee7ad1d81b86088ef24ea6cde3666ce95ff1cd3b6f7449fd5758425f6",
+  "src/segmentation/selector.py": "cca5e46e38412da8ea632738c661e9556761b8d35b7e8320c3991204cf6ab9d3"
+ },
+ "supersedes": "configs/withdrawn/selector_frozen_WITHDRAWN_20261029.json (withdrawn freeze; never used to make references)"
+}

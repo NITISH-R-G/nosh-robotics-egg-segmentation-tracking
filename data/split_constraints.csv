@@ -1,0 +1,12 @@
+image_id,constraint,reason
+not_damaged_135,force_dev,SAM pilot overlay and candidate features inspected (2026-10-29)
+not_damaged_145,force_dev,SAM pilot overlay and candidate features inspected (2026-10-29)
+not_damaged_78,force_dev,SAM pilot overlay and candidate features inspected; duplicate group with not_damaged_27
+not_damaged_27,force_dev,SAM pilot overlay and candidate features inspected; duplicate group with not_damaged_78
+not_damaged_156,force_dev,SAM pilot overlay and candidate features inspected; duplicate group with not_damaged_163
+not_damaged_163,force_dev,SAM pilot overlay and candidate features inspected; duplicate group with not_damaged_156
+not_damaged_112,force_dev,SAM pilot overlay and candidate features inspected
+not_damaged_129,force_dev,SAM pilot overlay and candidate features inspected
+not_damaged_149,force_dev,viewed full-size (no masks) during grouping review - conservative exposure control
+not_damaged_150,force_dev,viewed full-size (no masks) during grouping review - conservative exposure control
+not_damaged_152,force_dev,viewed full-size (no masks) during grouping review - conservative exposure control

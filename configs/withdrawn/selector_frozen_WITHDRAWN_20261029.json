@@ -1,0 +1,36 @@
+{
+ "code_version_at_freeze": "srchash:d62a207d9efd",
+ "decision": "S1 retained after final ablations E1/E2/E4/E5 (experiments/selector_log.csv decision rows, experiments/selector_decision.md)",
+ "evidence_sha256": {
+  "data/review/dev_egg_counts.csv": "c0054d58c97350f757d5fab78621481b22802277622a1c86021b2e302aa073b1",
+  "data/review/dev_instance_verdicts.csv": "67b81d359bae528e4280bbf2d829969cd20b18e635843d90a4af2c524e258eda",
+  "data/split_manifest.csv": "d971faeccbdcb3f945c652f8490e0a2058d13f01a8fb00fad1fe4a00a4f343e8",
+  "experiments/selector_instance_metrics.csv": "43766f6d875b04496c822e4a87fed0ef6b0eb6eb34d6699848f556cc0d45d890",
+  "experiments/selector_log.csv": "5b2d9055ea2f563f1cc18f81206ae351c177b3c43a4ba05e8e48982a4127416b",
+  "outputs/sam_candidates/audit.json": "3ae49b32f109a6aabb030faa14d8b0ebe2a8d2727595cd6452b9ac359c36a04e"
+ },
+ "frozen_name": "S1 conservative gates + review flag (selections identical to S1)",
+ "frozen_on_split": "v2_pilot_exposure_controlled (dev only)",
+ "label_caveat": "all evidence labels are AI-assisted and unverified by a human; thresholds are hypotheses, not tuned by search",
+ "selector": {
+  "alts": [],
+  "border_min_area_frac": null,
+  "border_min_ellipse_iou": null,
+  "fallback": "review",
+  "fallback_alts": [],
+  "max_area_frac": 0.6,
+  "max_aspect": 2.0,
+  "min_area_frac": 0.01,
+  "min_ellipse_iou": 0.93,
+  "min_pred_iou": 0.9,
+  "min_rel_area": null,
+  "min_solidity": 0.95,
+  "min_stability": 0.9,
+  "name": "S3_S1_plus_review_flag",
+  "nms_contain": 0.8,
+  "nms_iou": 0.5,
+  "relaxed_min_ellipse_iou": 0.8,
+  "relaxed_min_pred_iou": 0.75
+ },
+ "selector_sha256": "cfe44a86a5cc89544a5f7696c6fa9a8d921c3057523ff30c145b5315bbde9810"
+}

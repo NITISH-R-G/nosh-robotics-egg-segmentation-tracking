@@ -1,0 +1,29 @@
+{
+ "config": {
+  "colour": "W",
+  "blur_sigma": 0.0,
+  "threshold": "otsu",
+  "adaptive_block": 151,
+  "adaptive_c": -5.0,
+  "open_k": 5,
+  "close_k": 5,
+  "min_area_frac": 0.01,
+  "max_area_frac": 0.6,
+  "min_solidity": 0.0,
+  "max_aspect": 2.2,
+  "border_min_area_frac": 0.05,
+  "split_watershed": false,
+  "split_h": 0.4,
+  "min_ellipse_iou": 0.0
+ },
+ "config_sha": "6696e8cab3ba",
+ "selected_on": "development images only (88), amendment A6 rule",
+ "kept_steps": [
+  "E00",
+  "E02",
+  "E09",
+  "E10",
+  "E11"
+ ],
+ "code_version": "srchash:c6b42458d61c"
+}

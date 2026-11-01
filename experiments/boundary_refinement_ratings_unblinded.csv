@@ -1,0 +1,52 @@
+case_id,review_id,image_id,column,kind,rating,covers_intended_egg,background_leakage,occlusion,note,candidate_id
+C01,D11-c4,not_damaged_11,A,V2,2,yes,minor,plausible,"follows egg, ragged around leaf cutouts",not_damaged_11#4
+C02,D12-c9,not_damaged_12,A,V2,2,yes,minor,plausible,small leaf fragment included top-left,not_damaged_12#9
+C03,D13-c2,not_damaged_13,A,V2,2,yes,minor,plausible,detached bit at left,not_damaged_13#2
+C04,D144-c7,not_damaged_144,A,orig,3,yes,none,plausible,visible crescent correctly bounded,not_damaged_144#7
+C05,D124-c76,not_damaged_124,A,V2,2,yes,minor,not_applicable,"stray specks below, ragged lower edge",not_damaged_124#76
+C06,D135-c41,not_damaged_135,A,orig,2,yes,minor,not_applicable,"stray specks at left, ragged bottom",not_damaged_135#41
+C07,D145-c40,not_damaged_145,A,V2,1,yes,minor,not_applicable,"boxy straight left edge, specks",not_damaged_145#40
+C08,D42-c12,not_damaged_42,A,orig,2,yes,none,plausible,visible egg right of the rod,not_damaged_42#12
+C09,D123-c9,not_damaged_123,A,orig,2,yes,none,plausible,visible upper part; stair step lower right,not_damaged_123#9
+C10,D125-c4,not_damaged_125,A,V1,2,yes,none,plausible,visible upper part,not_damaged_125#4
+C11,D117-c23,not_damaged_117,A,V1,2,yes,minor,plausible,ambiguous object (uncertain case),not_damaged_117#23
+C12,D141-c0,not_damaged_141,A,orig,3,yes,none,not_applicable,clean,not_damaged_141#0
+C13,D112-c1,not_damaged_112,A,V2,2,yes,minor,not_applicable,includes pale bulge behind egg at upper left,not_damaged_112#1
+C14,D144-c4,not_damaged_144,A,V1,3,yes,none,not_applicable,clean,not_damaged_144#4
+C15,D27-c1,not_damaged_27,A,orig,2,yes,none,not_applicable,"ash egg, ragged lower right",not_damaged_27#1
+C16,D134-c3,not_damaged_134,A,V1,3,yes,none,not_applicable,"clean, border clipped",not_damaged_134#3
+C17,D129-c1,not_damaged_129,A,V2,3,yes,none,not_applicable,clean,not_damaged_129#1
+C01,D11-c4,not_damaged_11,B,V1,2,yes,minor,plausible,same as A with a small slit,not_damaged_11#4
+C02,D12-c9,not_damaged_12,B,V1,2,yes,none,plausible,cleanest left edge,not_damaged_12#9
+C03,D13-c2,not_damaged_13,B,V1,2,yes,minor,plausible,detached bit at left,not_damaged_13#2
+C04,D144-c7,not_damaged_144,B,V2,3,yes,none,plausible,identical in quality,not_damaged_144#7
+C05,D124-c76,not_damaged_124,B,V1,3,yes,none,not_applicable,smoothest follows blob,not_damaged_124#76
+C06,D135-c41,not_damaged_135,B,V1,2,yes,minor,not_applicable,small speck at left,not_damaged_135#41
+C07,D145-c40,not_damaged_145,B,orig,1,yes,minor,not_applicable,boxy straight left edge,not_damaged_145#40
+C08,D42-c12,not_damaged_42,B,V1,2,yes,none,plausible,visible egg right of the rod,not_damaged_42#12
+C09,D123-c9,not_damaged_123,B,V2,2,yes,none,plausible,same,not_damaged_123#9
+C10,D125-c4,not_damaged_125,B,orig,2,yes,none,plausible,same,not_damaged_125#4
+C11,D117-c23,not_damaged_117,B,V2,2,yes,minor,plausible,extends to top edge,not_damaged_117#23
+C12,D141-c0,not_damaged_141,B,V1,3,yes,none,not_applicable,clean,not_damaged_141#0
+C13,D112-c1,not_damaged_112,B,V1,3,yes,none,not_applicable,tight to the egg,not_damaged_112#1
+C14,D144-c4,not_damaged_144,B,V2,3,yes,none,not_applicable,clean,not_damaged_144#4
+C15,D27-c1,not_damaged_27,B,V2,2,yes,none,not_applicable,same,not_damaged_27#1
+C16,D134-c3,not_damaged_134,B,orig,3,yes,none,not_applicable,clean,not_damaged_134#3
+C17,D129-c1,not_damaged_129,B,V1,3,yes,none,not_applicable,clean,not_damaged_129#1
+C01,D11-c4,not_damaged_11,C,orig,2,yes,minor,plausible,similar; lower right slightly fuller,not_damaged_11#4
+C02,D12-c9,not_damaged_12,C,orig,2,yes,minor,plausible,small leaf fragment included top-left,not_damaged_12#9
+C03,D13-c2,not_damaged_13,C,orig,2,yes,minor,plausible,detached bit at left,not_damaged_13#2
+C04,D144-c7,not_damaged_144,C,V1,3,yes,none,plausible,identical in quality,not_damaged_144#7
+C05,D124-c76,not_damaged_124,C,orig,2,yes,minor,not_applicable,specks below,not_damaged_124#76
+C06,D135-c41,not_damaged_135,C,V2,2,yes,minor,not_applicable,stray left piece and bottom protrusions,not_damaged_135#41
+C07,D145-c40,not_damaged_145,C,V1,1,yes,minor,not_applicable,boxy straight left edge,not_damaged_145#40
+C08,D42-c12,not_damaged_42,C,V2,2,yes,none,plausible,also a disjoint piece left of the rod; plausible egg part,not_damaged_42#12
+C09,D123-c9,not_damaged_123,C,V1,2,yes,none,plausible,same,not_damaged_123#9
+C10,D125-c4,not_damaged_125,C,V2,2,yes,none,plausible,same,not_damaged_125#4
+C11,D117-c23,not_damaged_117,C,orig,2,yes,minor,plausible,ragged top with specks,not_damaged_117#23
+C12,D141-c0,not_damaged_141,C,V2,3,yes,none,not_applicable,clean,not_damaged_141#0
+C13,D112-c1,not_damaged_112,C,orig,3,yes,none,not_applicable,tight to the egg,not_damaged_112#1
+C14,D144-c4,not_damaged_144,C,orig,3,yes,none,not_applicable,clean,not_damaged_144#4
+C15,D27-c1,not_damaged_27,C,V1,2,yes,none,not_applicable,same,not_damaged_27#1
+C16,D134-c3,not_damaged_134,C,V2,3,yes,none,not_applicable,clean,not_damaged_134#3
+C17,D129-c1,not_damaged_129,C,orig,3,yes,none,not_applicable,clean,not_damaged_129#1

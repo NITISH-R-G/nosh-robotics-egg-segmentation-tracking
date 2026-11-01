@@ -1,0 +1,10 @@
+config_name,labelled_eggs,selected,tp_strict,tp_lenient,egg_bad_boundary,false_positives,missed_eggs,precision_lenient,recall_lenient,precision_strict,recall_strict,f1_lenient,images_with_fp,images_with_missed,tp_exceeds_label_images
+E1_S1_alt_shape,113,141,104,108,4,33,5,0.766,0.956,0.738,0.92,0.85,22,5,0
+E2_S1_alt_conf,113,116,105,108,3,8,5,0.931,0.956,0.905,0.929,0.943,8,5,0
+E4_S1_rel_area,113,99,99,99,0,0,14,1.0,0.876,1.0,0.876,0.934,0,14,0
+E5_S1_alt_gate_fallback,113,110,105,108,3,2,5,0.982,0.956,0.955,0.929,0.969,2,5,0
+S0_pilot_filter,113,237,103,106,3,131,7,0.447,0.938,0.435,0.912,0.606,51,7,0
+S1_conservative,113,100,99,99,0,1,14,0.99,0.876,0.99,0.876,0.93,1,14,0
+S2_conservative_border_rule,113,105,99,99,0,6,14,0.943,0.876,0.943,0.876,0.908,6,14,0
+S3_S1_plus_review_flag,113,100,99,99,0,1,14,0.99,0.876,0.99,0.876,0.93,1,14,0
+S4_S1_plus_relaxed_fallback,113,111,103,107,4,4,6,0.964,0.947,0.928,0.912,0.955,4,6,0

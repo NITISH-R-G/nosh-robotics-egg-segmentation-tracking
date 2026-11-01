@@ -1,0 +1,273 @@
+review_id,image_id,verdict,uncertainty,note,reviewer
+D1-c1,not_damaged_1,egg,,clean boundary,claude_ai_assisted_visual_review
+D100-c0,not_damaged_100,egg,,clean,claude_ai_assisted_visual_review
+D100-c19,not_damaged_100,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D101-c0,not_damaged_101,egg,,clean,claude_ai_assisted_visual_review
+D101-c7,not_damaged_101,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D101-c39,not_damaged_101,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D102-c0,not_damaged_102,egg,,clean,claude_ai_assisted_visual_review
+D102-c10,not_damaged_102,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D103-c0,not_damaged_103,egg,,clean,claude_ai_assisted_visual_review
+D103-c1,not_damaged_103,egg,,clean,claude_ai_assisted_visual_review
+D103-c2,not_damaged_103,egg,,clean,claude_ai_assisted_visual_review
+D104-c2,not_damaged_104,egg,,"white-on-white bag, boundary good",claude_ai_assisted_visual_review
+D105-c0,not_damaged_105,egg,,clean,claude_ai_assisted_visual_review
+D105-c1,not_damaged_105,egg,,clean,claude_ai_assisted_visual_review
+D105-c2,not_damaged_105,egg,,clean,claude_ai_assisted_visual_review
+D106-c3,not_damaged_106,egg,,"white-on-white, boundary good",claude_ai_assisted_visual_review
+D108-c0,not_damaged_108,egg,,clean,claude_ai_assisted_visual_review
+D108-c63,not_damaged_108,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D109-c1,not_damaged_109,egg,,"white-on-white bag, boundary good",claude_ai_assisted_visual_review
+D11-c0,not_damaged_11,not_egg,,blue cloth top-right (chosen by S0 and S4 fallback),claude_ai_assisted_visual_review
+D11-c25,not_damaged_11,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D11-c57,not_damaged_11,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D11-c105,not_damaged_11,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D110-c0,not_damaged_110,egg,,clean,claude_ai_assisted_visual_review
+D111-c1,not_damaged_111,egg,,"white-on-white, boundary good",claude_ai_assisted_visual_review
+D112-c1,not_damaged_112,egg,low,white egg on white bag; slight under-coverage at left edge,claude_ai_assisted_visual_review
+D112-c17,not_damaged_112,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D113-c0,not_damaged_113,egg,,in water,claude_ai_assisted_visual_review
+D113-c1,not_damaged_113,egg,,clean,claude_ai_assisted_visual_review
+D114-c0,not_damaged_114,egg,,clean,claude_ai_assisted_visual_review
+D114-c1,not_damaged_114,egg,,in water,claude_ai_assisted_visual_review
+D115-c0,not_damaged_115,egg,,clean,claude_ai_assisted_visual_review
+D115-c1,not_damaged_115,egg,,clean,claude_ai_assisted_visual_review
+D116-c3,not_damaged_116,egg,medium,"egg in tray cavity, boundary approximate on right/bottom (selected by S0,S4)",claude_ai_assisted_visual_review
+D116-c8,not_damaged_116,not_egg,,dark background region,claude_ai_assisted_visual_review
+D117-c21,not_damaged_117,not_egg,,glossy tray depression below the egg (my second-pass judgement; medium uncertainty),claude_ai_assisted_visual_review
+D117-c23,not_damaged_117,egg_bad_boundary,high,left part of the egg-like object that the rod cuts; ambiguous whether object is an egg (selected by S4 fallback),claude_ai_assisted_visual_review
+D118-c0,not_damaged_118,egg,,"on foil, boundary good",claude_ai_assisted_visual_review
+D118-c25,not_damaged_118,not_egg,,"dark table region (selected by S0,S2 via border rule)",claude_ai_assisted_visual_review
+D119-c1,not_damaged_119,egg,,"on foil, boundary good",claude_ai_assisted_visual_review
+D119-c16,not_damaged_119,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D119-c41,not_damaged_119,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D12-c18,not_damaged_12,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D12-c46,not_damaged_12,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D12-c134,not_damaged_12,not_egg,,blue cloth (chosen by S4 fallback),claude_ai_assisted_visual_review
+D120-c0,not_damaged_120,egg,,clean,claude_ai_assisted_visual_review
+D121-c0,not_damaged_121,egg,,clean,claude_ai_assisted_visual_review
+D121-c1,not_damaged_121,egg,,clean,claude_ai_assisted_visual_review
+D121-c2,not_damaged_121,egg,,clean,claude_ai_assisted_visual_review
+D123-c9,not_damaged_123,egg_bad_boundary,medium,"egg partly hidden behind translucent bag sheet; mask covers only the visible upper part (selected by S0,S4)",claude_ai_assisted_visual_review
+D123-c29,not_damaged_123,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D125-c4,not_damaged_125,egg_bad_boundary,medium,"egg partly hidden behind translucent sheet; mask covers only the visible upper part (selected by S0,S4)",claude_ai_assisted_visual_review
+D125-c38,not_damaged_125,not_egg,,bag/box region (selected by S0),claude_ai_assisted_visual_review
+D127-c1,not_damaged_127,egg,,clean,claude_ai_assisted_visual_review
+D127-c62,not_damaged_127,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D129-c0,not_damaged_129,egg,,clean,claude_ai_assisted_visual_review
+D129-c1,not_damaged_129,egg,,in water,claude_ai_assisted_visual_review
+D13-c2,not_damaged_13,egg,medium,covers visible egg; ragged edge where leaves occlude,claude_ai_assisted_visual_review
+D13-c39,not_damaged_13,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D13-c120,not_damaged_13,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D13-c346,not_damaged_13,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D130-c0,not_damaged_130,egg,,clean,claude_ai_assisted_visual_review
+D130-c5,not_damaged_130,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D130-c54,not_damaged_130,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D131-c2,not_damaged_131,egg,,"on foil, boundary good",claude_ai_assisted_visual_review
+D131-c20,not_damaged_131,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D131-c25,not_damaged_131,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D131-c48,not_damaged_131,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D131-c57,not_damaged_131,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D132-c0,not_damaged_132,egg,,clean,claude_ai_assisted_visual_review
+D132-c1,not_damaged_132,egg,,clean,claude_ai_assisted_visual_review
+D132-c3,not_damaged_132,egg,,clean,claude_ai_assisted_visual_review
+D133-c0,not_damaged_133,egg,,clean,claude_ai_assisted_visual_review
+D133-c1,not_damaged_133,egg,,clean,claude_ai_assisted_visual_review
+D133-c2,not_damaged_133,egg,,clean,claude_ai_assisted_visual_review
+D133-c23,not_damaged_133,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D134-c1,not_damaged_134,egg,,clean,claude_ai_assisted_visual_review
+D134-c2,not_damaged_134,egg,,clean,claude_ai_assisted_visual_review
+D134-c3,not_damaged_134,egg,,egg clipped by left border; boundary good,claude_ai_assisted_visual_review
+D134-c23,not_damaged_134,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D135-c19,not_damaged_135,not_egg,,tile at top-left corner (selected by S0 and S4 fallback; the submerged egg itself has no candidate in the review pool),claude_ai_assisted_visual_review
+D136-c0,not_damaged_136,egg,,clean,claude_ai_assisted_visual_review
+D136-c1,not_damaged_136,egg,,clean,claude_ai_assisted_visual_review
+D136-c3,not_damaged_136,egg,,clean,claude_ai_assisted_visual_review
+D139-c0,not_damaged_139,egg,,clean,claude_ai_assisted_visual_review
+D139-c23,not_damaged_139,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D140-c0,not_damaged_140,egg,,touches border,claude_ai_assisted_visual_review
+D140-c2,not_damaged_140,egg,,clean,claude_ai_assisted_visual_review
+D140-c3,not_damaged_140,egg,,clean,claude_ai_assisted_visual_review
+D140-c4,not_damaged_140,not_egg,,"steel plate region (selected by S0,S2 via border rule)",claude_ai_assisted_visual_review
+D141-c0,not_damaged_141,egg,,clean,claude_ai_assisted_visual_review
+D141-c4,not_damaged_141,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D143-c6,not_damaged_143,egg,low,white-on-white; top edge slightly under-covered,claude_ai_assisted_visual_review
+D144-c0,not_damaged_144,egg,,clean,claude_ai_assisted_visual_review
+D144-c4,not_damaged_144,egg,,front-left egg,claude_ai_assisted_visual_review
+D146-c0,not_damaged_146,egg,,clean,claude_ai_assisted_visual_review
+D147-c0,not_damaged_147,egg,,clean,claude_ai_assisted_visual_review
+D147-c1,not_damaged_147,egg,,in water,claude_ai_assisted_visual_review
+D147-c2,not_damaged_147,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D148-c0,not_damaged_148,egg,,clean,claude_ai_assisted_visual_review
+D148-c1,not_damaged_148,egg,,clean,claude_ai_assisted_visual_review
+D148-c3,not_damaged_148,egg,,clean,claude_ai_assisted_visual_review
+D148-c10,not_damaged_148,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D149-c0,not_damaged_149,egg,,clean,claude_ai_assisted_visual_review
+D149-c17,not_damaged_149,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D15-c0,not_damaged_15,egg,,clean,claude_ai_assisted_visual_review
+D15-c12,not_damaged_15,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D15-c16,not_damaged_15,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D15-c27,not_damaged_15,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D150-c1,not_damaged_150,egg,,clean,claude_ai_assisted_visual_review
+D151-c0,not_damaged_151,egg,,hand-held,claude_ai_assisted_visual_review
+D152-c0,not_damaged_152,egg,,hand-held,claude_ai_assisted_visual_review
+D152-c8,not_damaged_152,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D152-c34,not_damaged_152,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D155-c3,not_damaged_155,egg,,hand-held; small bump at top-left edge,claude_ai_assisted_visual_review
+D155-c14,not_damaged_155,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D156-c1,not_damaged_156,egg,,clean,claude_ai_assisted_visual_review
+D156-c12,not_damaged_156,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D158-c1,not_damaged_158,egg,,hand-held; lower-left edge slightly cut by finger,claude_ai_assisted_visual_review
+D16-c0,not_damaged_16,egg,,clean,claude_ai_assisted_visual_review
+D16-c1,not_damaged_16,not_egg,,earphone bud (selected by S0-S4),claude_ai_assisted_visual_review
+D16-c105,not_damaged_16,not_egg,,earphone/bud at top-left,claude_ai_assisted_visual_review
+D162-c0,not_damaged_162,egg,,clean,claude_ai_assisted_visual_review
+D162-c9,not_damaged_162,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D162-c18,not_damaged_162,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D163-c0,not_damaged_163,egg,,clean,claude_ai_assisted_visual_review
+D17-c0,not_damaged_17,egg,,clean,claude_ai_assisted_visual_review
+D17-c7,not_damaged_17,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D17-c10,not_damaged_17,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D17-c13,not_damaged_17,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D17-c20,not_damaged_17,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D17-c21,not_damaged_17,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D17-c22,not_damaged_17,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D17-c26,not_damaged_17,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D17-c30,not_damaged_17,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D17-c34,not_damaged_17,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D17-c35,not_damaged_17,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D17-c47,not_damaged_17,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D17-c56,not_damaged_17,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D17-c63,not_damaged_17,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D17-c72,not_damaged_17,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D18-c0,not_damaged_18,egg,,clean,claude_ai_assisted_visual_review
+D18-c2,not_damaged_18,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D18-c24,not_damaged_18,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D18-c39,not_damaged_18,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D18-c46,not_damaged_18,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D18-c49,not_damaged_18,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D18-c52,not_damaged_18,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D18-c67,not_damaged_18,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D18-c71,not_damaged_18,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D19-c0,not_damaged_19,egg,,clean,claude_ai_assisted_visual_review
+D19-c1,not_damaged_19,not_egg,,keyboard key,claude_ai_assisted_visual_review
+D19-c7,not_damaged_19,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D19-c18,not_damaged_19,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D19-c19,not_damaged_19,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D19-c44,not_damaged_19,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D19-c69,not_damaged_19,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D20-c4,not_damaged_20,egg,medium,hand-held egg; thumb overlap makes lower-left boundary approximate,claude_ai_assisted_visual_review
+D20-c17,not_damaged_20,not_egg,,shadow/finger gap,claude_ai_assisted_visual_review
+D21-c1,not_damaged_21,egg,,clean,claude_ai_assisted_visual_review
+D22-c2,not_damaged_22,egg,,"small egg, clean",claude_ai_assisted_visual_review
+D24-c2,not_damaged_24,egg,,"backlit silhouette, boundary good",claude_ai_assisted_visual_review
+D27-c1,not_damaged_27,egg,low,"ash-covered egg, slightly ragged right edge",claude_ai_assisted_visual_review
+D27-c46,not_damaged_27,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D27-c99,not_damaged_27,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D28-c1,not_damaged_28,egg,,clean,claude_ai_assisted_visual_review
+D3-c0,not_damaged_3,egg,,clean boundary,claude_ai_assisted_visual_review
+D3-c1,not_damaged_3,not_egg,,cloth patch at border,claude_ai_assisted_visual_review
+D3-c39,not_damaged_3,not_egg,,cloth patch,claude_ai_assisted_visual_review
+D32-c1,not_damaged_32,egg,,clean,claude_ai_assisted_visual_review
+D33-c1,not_damaged_33,egg,,clean,claude_ai_assisted_visual_review
+D34-c1,not_damaged_34,egg,,clean,claude_ai_assisted_visual_review
+D35-c1,not_damaged_35,egg,,"clean, large egg",claude_ai_assisted_visual_review
+D36-c0,not_damaged_36,egg,,"ash-covered egg, clean outline",claude_ai_assisted_visual_review
+D36-c28,not_damaged_36,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D36-c49,not_damaged_36,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D36-c58,not_damaged_36,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D36-c66,not_damaged_36,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D36-c68,not_damaged_36,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D37-c0,not_damaged_37,egg,,clean,claude_ai_assisted_visual_review
+D39-c1,not_damaged_39,egg,,"small egg, clean",claude_ai_assisted_visual_review
+D39-c68,not_damaged_39,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D4-c1,not_damaged_4,egg,,clean; small ragged edge lower right,claude_ai_assisted_visual_review
+D40-c2,not_damaged_40,egg,,clean,claude_ai_assisted_visual_review
+D41-c0,not_damaged_41,egg,,"ash-covered egg, clean",claude_ai_assisted_visual_review
+D41-c34,not_damaged_41,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D41-c64,not_damaged_41,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D41-c81,not_damaged_41,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D41-c100,not_damaged_41,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D41-c110,not_damaged_41,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D41-c120,not_damaged_41,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D41-c190,not_damaged_41,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D42-c3,not_damaged_42,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D42-c10,not_damaged_42,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D42-c12,not_damaged_42,egg_bad_boundary,medium,"covers egg right of the rod only; part left of rod missing (selected by S0,S4)",claude_ai_assisted_visual_review
+D42-c16,not_damaged_42,not_egg,,"tray cavity (selected by S0,S2)",claude_ai_assisted_visual_review
+D42-c42,not_damaged_42,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D43-c0,not_damaged_43,egg,,clean,claude_ai_assisted_visual_review
+D43-c6,not_damaged_43,not_egg,,"laptop part (selected by S0,S2 via border rule)",claude_ai_assisted_visual_review
+D43-c9,not_damaged_43,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D43-c10,not_damaged_43,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D43-c15,not_damaged_43,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D43-c16,not_damaged_43,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D43-c17,not_damaged_43,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D43-c19,not_damaged_43,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D43-c28,not_damaged_43,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D43-c29,not_damaged_43,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D43-c31,not_damaged_43,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D43-c70,not_damaged_43,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D43-c119,not_damaged_43,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D44-c3,not_damaged_44,egg,low,large hand-held egg; ragged edge near thumb,claude_ai_assisted_visual_review
+D44-c7,not_damaged_44,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D44-c8,not_damaged_44,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D44-c9,not_damaged_44,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D45-c1,not_damaged_45,egg,,clean,claude_ai_assisted_visual_review
+D45-c14,not_damaged_45,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D49-c0,not_damaged_49,egg,,clean,claude_ai_assisted_visual_review
+D49-c1,not_damaged_49,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D49-c14,not_damaged_49,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D49-c18,not_damaged_49,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D5-c0,not_damaged_5,egg,,clean boundary,claude_ai_assisted_visual_review
+D52-c0,not_damaged_52,egg,low,"egg on earphone cable; flat lower edge follows cable (selected by S0,S4)",claude_ai_assisted_visual_review
+D52-c4,not_damaged_52,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D52-c9,not_damaged_52,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D52-c60,not_damaged_52,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D55-c0,not_damaged_55,egg,,clean,claude_ai_assisted_visual_review
+D55-c18,not_damaged_55,not_egg,,"cloth fold (selected by S0,S2 via border rule)",claude_ai_assisted_visual_review
+D6-c0,not_damaged_6,egg,,clean,claude_ai_assisted_visual_review
+D6-c4,not_damaged_6,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D6-c10,not_damaged_6,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D6-c27,not_damaged_6,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D62-c0,not_damaged_62,egg,,clean,claude_ai_assisted_visual_review
+D62-c1,not_damaged_62,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D62-c22,not_damaged_62,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D62-c39,not_damaged_62,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D62-c45,not_damaged_62,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D62-c134,not_damaged_62,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D78-c1,not_damaged_78,egg,low,"ash-covered egg, slightly ragged lower right",claude_ai_assisted_visual_review
+D78-c93,not_damaged_78,not_egg,,"background/object, not an egg",claude_ai_assisted_visual_review
+D106-c6,not_damaged_106,not_egg,,white box corner (false positive of the relaxed gate),claude_ai_assisted_visual_review
+D11-c4,not_damaged_11,egg_bad_boundary,medium,egg covered by leaves; ragged leaf cutouts in boundary (E1 admits),claude_ai_assisted_visual_review
+D112-c53,not_damaged_112,not_egg,,bag region (false positive of the relaxed gate),claude_ai_assisted_visual_review
+D118-c1,not_damaged_118,not_egg,,dark table region (false positive of the relaxed gate),claude_ai_assisted_visual_review
+D118-c6,not_damaged_118,not_egg,,label on foil wrapper (false positive of the relaxed gate),claude_ai_assisted_visual_review
+D12-c9,not_damaged_12,egg_bad_boundary,medium,"egg partly covered by leaves; ragged, covers visible body (E1 admits)",claude_ai_assisted_visual_review
+D12-c17,not_damaged_12,not_egg,,blue cloth (false positive of the relaxed gate),claude_ai_assisted_visual_review
+D121-c5,not_damaged_121,not_egg,,steel plate region (contains an egg but is not an egg mask) (false positive of the relaxed gate),claude_ai_assisted_visual_review
+D124-c76,not_damaged_124,egg,medium,"submerged egg; mask follows the visible blob, boundary approximate with a few stray specks (E2 admits)",claude_ai_assisted_visual_review
+D13-c0,not_damaged_13,not_egg,,dark vegetation/background region (false positive of the relaxed gate),claude_ai_assisted_visual_review
+D131-c4,not_damaged_131,not_egg,,foil wrapper label region (false positive of the relaxed gate),claude_ai_assisted_visual_review
+D131-c87,not_damaged_131,not_egg,,foil wrapper region (false positive of the relaxed gate),claude_ai_assisted_visual_review
+D135-c41,not_damaged_135,egg,medium,"submerged egg; mask follows the visible blob, boundary approximate with small stray specks (E2 admits)",claude_ai_assisted_visual_review
+D139-c5,not_damaged_139,not_egg,,container body (false positive of the relaxed gate),claude_ai_assisted_visual_review
+D140-c10,not_damaged_140,not_egg,,dark background object (false positive of the relaxed gate),claude_ai_assisted_visual_review
+D141-c11,not_damaged_141,not_egg,,blue bowl region (false positive of the relaxed gate),claude_ai_assisted_visual_review
+D144-c7,not_damaged_144,egg,low,"back egg: correct visible (crescent) region, occluded by the front egg (E1 admits)",claude_ai_assisted_visual_review
+D145-c40,not_damaged_145,egg_bad_boundary,medium,"submerged egg blob; left edge cut straight/boxy, approximate (E2 admits)",claude_ai_assisted_visual_review
+D149-c2,not_damaged_149,not_egg,,tile region (false positive of the relaxed gate),claude_ai_assisted_visual_review
+D155-c1,not_damaged_155,not_egg,,dark clothing/background corner (false positive of the relaxed gate),claude_ai_assisted_visual_review
+D163-c3,not_damaged_163,not_egg,,wall and bowl background region (false positive of the relaxed gate),claude_ai_assisted_visual_review
+D19-c2,not_damaged_19,not_egg,,keyboard key (false positive of the relaxed gate),claude_ai_assisted_visual_review
+D19-c3,not_damaged_19,not_egg,,keyboard key (false positive of the relaxed gate),claude_ai_assisted_visual_review
+D19-c6,not_damaged_19,not_egg,,keyboard key (false positive of the relaxed gate),claude_ai_assisted_visual_review
+D19-c12,not_damaged_19,not_egg,,keyboard key (false positive of the relaxed gate),claude_ai_assisted_visual_review
+D19-c14,not_damaged_19,not_egg,,keyboard key (false positive of the relaxed gate),claude_ai_assisted_visual_review
+D24-c10,not_damaged_24,not_egg,,bright wall/light region (false positive of the relaxed gate),claude_ai_assisted_visual_review
+D4-c37,not_damaged_4,not_egg,,cloth patch (false positive of the relaxed gate),claude_ai_assisted_visual_review
+D41-c198,not_damaged_41,not_egg,,ash/rubble region (false positive of the relaxed gate),claude_ai_assisted_visual_review
+D42-c9,not_damaged_42,not_egg,,tray cavity (plastic depression) (false positive of the relaxed gate),claude_ai_assisted_visual_review
+D43-c5,not_damaged_43,not_egg,,keyboard key (false positive of the relaxed gate),claude_ai_assisted_visual_review
+D5-c11,not_damaged_5,not_egg,,cloth patch (false positive of the relaxed gate),claude_ai_assisted_visual_review
+D55-c1,not_damaged_55,not_egg,,wall/cloth region (false positive of the relaxed gate),claude_ai_assisted_visual_review

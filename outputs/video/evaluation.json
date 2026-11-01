@@ -1,0 +1,413 @@
+{
+ "T0_gated|dev": {
+  "frames_used": 63,
+  "expected_eggs": 107,
+  "detections": 103,
+  "coverage": 0.9626168224299065,
+  "missed": 4,
+  "extra": 0,
+  "id_switches": 3,
+  "ids_per_identity": {
+   "Q": [
+    1,
+    2,
+    3
+   ],
+   "P": [
+    2,
+    4
+   ]
+  },
+  "distinct_ids": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "extra_ids": 2,
+  "track_purity": {
+   "1": {
+    "Q": 18
+   },
+   "2": {
+    "P": 39,
+    "Q": 20
+   },
+   "3": {
+    "Q": 8
+   },
+   "4": {
+    "P": 16
+   }
+  },
+  "gaps": [
+   {
+    "identity": "Q",
+    "start": 480,
+    "end": 558,
+    "why": "hand lifts and carries Q to the right",
+    "retained": false,
+    "id_before": 1,
+    "id_after": 3
+   },
+   {
+    "identity": "Q",
+    "start": 648,
+    "end": 750,
+    "why": "hand carries Q back to the far left",
+    "retained": false,
+    "id_before": 3,
+    "id_after": 2
+   },
+   {
+    "identity": "P",
+    "start": 750,
+    "end": 816,
+    "why": "hand carries P to the right",
+    "retained": false,
+    "id_before": 2,
+    "id_after": 4
+   }
+  ]
+ },
+ "T0_gated|heldout": {
+  "frames_used": 58,
+  "expected_eggs": 98,
+  "detections": 98,
+  "coverage": 1.0,
+  "missed": 0,
+  "extra": 0,
+  "id_switches": 3,
+  "ids_per_identity": {
+   "Q": [
+    1,
+    2,
+    3
+   ],
+   "P": [
+    2,
+    4
+   ]
+  },
+  "distinct_ids": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "extra_ids": 2,
+  "track_purity": {
+   "1": {
+    "Q": 20
+   },
+   "2": {
+    "P": 39,
+    "Q": 19
+   },
+   "3": {
+    "Q": 7
+   },
+   "4": {
+    "P": 13
+   }
+  },
+  "gaps": [
+   {
+    "identity": "Q",
+    "start": 480,
+    "end": 558,
+    "why": "hand lifts and carries Q to the right",
+    "retained": false,
+    "id_before": 1,
+    "id_after": 3
+   },
+   {
+    "identity": "Q",
+    "start": 648,
+    "end": 750,
+    "why": "hand carries Q back to the far left",
+    "retained": false,
+    "id_before": 3,
+    "id_after": 2
+   },
+   {
+    "identity": "P",
+    "start": 750,
+    "end": 816,
+    "why": "hand carries P to the right",
+    "retained": false,
+    "id_before": 2,
+    "id_after": 4
+   }
+  ]
+ },
+ "T0_gated|all": {
+  "frames_used": 121,
+  "expected_eggs": 205,
+  "detections": 201,
+  "coverage": 0.9804878048780488,
+  "missed": 4,
+  "extra": 0,
+  "id_switches": 3,
+  "ids_per_identity": {
+   "Q": [
+    1,
+    2,
+    3
+   ],
+   "P": [
+    2,
+    4
+   ]
+  },
+  "distinct_ids": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "extra_ids": 2,
+  "track_purity": {
+   "1": {
+    "Q": 38
+   },
+   "2": {
+    "P": 78,
+    "Q": 39
+   },
+   "3": {
+    "Q": 15
+   },
+   "4": {
+    "P": 29
+   }
+  },
+  "gaps": [
+   {
+    "identity": "Q",
+    "start": 480,
+    "end": 558,
+    "why": "hand lifts and carries Q to the right",
+    "retained": false,
+    "id_before": 1,
+    "id_after": 3
+   },
+   {
+    "identity": "Q",
+    "start": 648,
+    "end": 750,
+    "why": "hand carries Q back to the far left",
+    "retained": false,
+    "id_before": 3,
+    "id_after": 2
+   },
+   {
+    "identity": "P",
+    "start": 750,
+    "end": 816,
+    "why": "hand carries P to the right",
+    "retained": false,
+    "id_before": 2,
+    "id_after": 4
+   }
+  ]
+ },
+ "T1_gated_plus_two_egg_prior|dev": {
+  "frames_used": 63,
+  "expected_eggs": 107,
+  "detections": 103,
+  "coverage": 0.9626168224299065,
+  "missed": 4,
+  "extra": 0,
+  "id_switches": 2,
+  "ids_per_identity": {
+   "Q": [
+    1,
+    2
+   ],
+   "P": [
+    2,
+    3
+   ]
+  },
+  "distinct_ids": [
+   1,
+   2,
+   3
+  ],
+  "extra_ids": 1,
+  "track_purity": {
+   "1": {
+    "Q": 26
+   },
+   "2": {
+    "P": 39,
+    "Q": 20
+   },
+   "3": {
+    "P": 16
+   }
+  },
+  "gaps": [
+   {
+    "identity": "Q",
+    "start": 480,
+    "end": 558,
+    "why": "hand lifts and carries Q to the right",
+    "retained": true,
+    "id_before": 1,
+    "id_after": 1
+   },
+   {
+    "identity": "Q",
+    "start": 648,
+    "end": 750,
+    "why": "hand carries Q back to the far left",
+    "retained": false,
+    "id_before": 1,
+    "id_after": 2
+   },
+   {
+    "identity": "P",
+    "start": 750,
+    "end": 816,
+    "why": "hand carries P to the right",
+    "retained": false,
+    "id_before": 2,
+    "id_after": 3
+   }
+  ]
+ },
+ "T1_gated_plus_two_egg_prior|heldout": {
+  "frames_used": 58,
+  "expected_eggs": 98,
+  "detections": 98,
+  "coverage": 1.0,
+  "missed": 0,
+  "extra": 0,
+  "id_switches": 2,
+  "ids_per_identity": {
+   "Q": [
+    1,
+    2
+   ],
+   "P": [
+    2,
+    3
+   ]
+  },
+  "distinct_ids": [
+   1,
+   2,
+   3
+  ],
+  "extra_ids": 1,
+  "track_purity": {
+   "1": {
+    "Q": 27
+   },
+   "2": {
+    "P": 39,
+    "Q": 19
+   },
+   "3": {
+    "P": 13
+   }
+  },
+  "gaps": [
+   {
+    "identity": "Q",
+    "start": 480,
+    "end": 558,
+    "why": "hand lifts and carries Q to the right",
+    "retained": true,
+    "id_before": 1,
+    "id_after": 1
+   },
+   {
+    "identity": "Q",
+    "start": 648,
+    "end": 750,
+    "why": "hand carries Q back to the far left",
+    "retained": false,
+    "id_before": 1,
+    "id_after": 2
+   },
+   {
+    "identity": "P",
+    "start": 750,
+    "end": 816,
+    "why": "hand carries P to the right",
+    "retained": false,
+    "id_before": 2,
+    "id_after": 3
+   }
+  ]
+ },
+ "T1_gated_plus_two_egg_prior|all": {
+  "frames_used": 121,
+  "expected_eggs": 205,
+  "detections": 201,
+  "coverage": 0.9804878048780488,
+  "missed": 4,
+  "extra": 0,
+  "id_switches": 2,
+  "ids_per_identity": {
+   "Q": [
+    1,
+    2
+   ],
+   "P": [
+    2,
+    3
+   ]
+  },
+  "distinct_ids": [
+   1,
+   2,
+   3
+  ],
+  "extra_ids": 1,
+  "track_purity": {
+   "1": {
+    "Q": 53
+   },
+   "2": {
+    "P": 78,
+    "Q": 39
+   },
+   "3": {
+    "P": 29
+   }
+  },
+  "gaps": [
+   {
+    "identity": "Q",
+    "start": 480,
+    "end": 558,
+    "why": "hand lifts and carries Q to the right",
+    "retained": true,
+    "id_before": 1,
+    "id_after": 1
+   },
+   {
+    "identity": "Q",
+    "start": 648,
+    "end": 750,
+    "why": "hand carries Q back to the far left",
+    "retained": false,
+    "id_before": 1,
+    "id_after": 2
+   },
+   {
+    "identity": "P",
+    "start": 750,
+    "end": 816,
+    "why": "hand carries P to the right",
+    "retained": false,
+    "id_before": 2,
+    "id_after": 3
+   }
+  ]
+ }
+}

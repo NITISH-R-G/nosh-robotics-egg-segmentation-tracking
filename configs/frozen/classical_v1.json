@@ -1,0 +1,52 @@
+{
+ "artifact_sha256": "d8c827fe7d9d12ff5fd384187185d95c67295a8f610bb52566446fd786a0feb1",
+ "config": {
+  "adaptive_block": 151,
+  "adaptive_c": -5.0,
+  "blur_sigma": 0.0,
+  "border_min_area_frac": 0.05,
+  "close_k": 5,
+  "colour": "W",
+  "max_area_frac": 0.6,
+  "max_aspect": 2.2,
+  "min_area_frac": 0.01,
+  "min_ellipse_iou": 0.0,
+  "min_solidity": 0.0,
+  "open_k": 5,
+  "split_h": 0.4,
+  "split_watershed": false,
+  "threshold": "otsu"
+ },
+ "config_sha": "6696e8cab3ba",
+ "environment": {
+  "platform": "Windows-11-10.0.26220-SP0",
+  "python": "3.12.3",
+  "requirements_lock_sha256": "2e8396053a57cee7bcf98ee7fac7d6ee17fe536b874c4f486cc12d242e20980f",
+  "torch": "2.11.0+cu128"
+ },
+ "evidence_sha256": {
+  "configs/classical_final_dev.json": "f9e4e7e97fc66740b3600a269c1a3e3e529b749bbdebd0e55f7151b038940b74",
+  "data/split_manifest.csv": "d971faeccbdcb3f945c652f8490e0a2058d13f01a8fb00fad1fe4a00a4f343e8",
+  "experiments/classical_log.csv": "5bf81a1dddf83ab35ac01b84b51cebf34d687d01d1cfe7728ebdd850cead31ac",
+  "experiments/final_evaluation_protocol.md": "ad1bf9b671b0856153366bb8e9c6fd88e9580597992f033144646033f92934e3"
+ },
+ "kind": "classical image processing (no learned components)",
+ "label_caveat": "development scores are against SAM-derived references with AI-assisted corrections",
+ "name": "classical_v1",
+ "pipeline": [
+  "BGR uint8 image, no resizing",
+  "foreground map: Lab lightness minus chroma ('W')",
+  "global Otsu threshold",
+  "5x5 open, 5x5 close, hole fill, 8-connected components",
+  "filters: area 1%-60%, aspect <= 2.2, border-touching components >= 5% of the image"
+ ],
+ "recommendation_recorded": "documented simple baseline, NOT presented as competitive (experiments/classical_failure_analysis.md)",
+ "selected_on": "88 development images only by the pre-registered greedy rule (experiments/classical_comparison_protocol*.md, classical_log.csv)",
+ "source_files_sha256": {
+  "src/evaluation/metrics.py": "3f270109ca44706a1b750dfc81fa97cd9f55ab043f827a2f21e1f1d12005aa72",
+  "src/experiments/classical_experiments.py": "8225b05835f9577bb3942305fb554f7e620e77b85f0c5e50a8e9cc488d489e11",
+  "src/experiments/final_eval.py": "7478fa4e6f3a68e51369d5452703c55ebae9363c34c11849f709a4c0d58709b9",
+  "src/segmentation/classical.py": "2c0fad3129bfaa092da46570226a57bfc5212e5e85578aebf54680598fdd89f5",
+  "src/segmentation/masks.py": "cb75c61e829d52de24870c7bd9f6f7f6994b32406cdbd61578f36aa0ef3067c7"
+ }
+}

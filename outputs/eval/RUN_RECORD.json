@@ -1,0 +1,8 @@
+{
+ "ran_at": "20261101-130625",
+ "n_images": 22,
+ "s1_selector_total_s": 4.803324700000076,
+ "s1_artifact_sha256": "a6e46871795be95ef723192ecc610ba00dd9b8cd60d2403a89b81565e77c6a07",
+ "classical_artifact_sha256": "d8c827fe7d9d12ff5fd384187185d95c67295a8f610bb52566446fd786a0feb1",
+ "per_image_csv_sha256": "88c11c96393b3b0affef9e8b78809bf43a722d13e3e59dec09cc455c4fb5e4d2"
+}

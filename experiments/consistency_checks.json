@@ -1,0 +1,194 @@
+[
+ {
+  "check": "split 88 dev / 22 eval, 110 total",
+  "result": "PASS",
+  "evidence": "data/split_manifest.csv",
+  "detail": "{'dev': 88, 'eval': 22}"
+ },
+ {
+  "check": "eval run used exactly the 22 eval ids",
+  "result": "PASS",
+  "evidence": "outputs/eval/eval_split.csv",
+  "detail": ""
+ },
+ {
+  "check": "eval masks S1 = 22 eval ids",
+  "result": "PASS",
+  "evidence": "outputs/eval/S1/masks",
+  "detail": "22 files"
+ },
+ {
+  "check": "eval masks classical = 22 eval ids",
+  "result": "PASS",
+  "evidence": "outputs/eval/classical/masks",
+  "detail": "22 files"
+ },
+ {
+  "check": "RUN_RECORD hashes equal frozen artifact hashes",
+  "result": "PASS",
+  "evidence": "outputs/eval/RUN_RECORD.json",
+  "detail": ""
+ },
+ {
+  "check": "classical frozen config equals configs/classical_final_dev.json",
+  "result": "PASS",
+  "evidence": "configs/frozen/classical_v1.json",
+  "detail": ""
+ },
+ {
+  "check": "dev S1 exact count 73/88 = 0.830",
+  "result": "PASS",
+  "evidence": "experiments/s1_same_protocol_per_image.csv",
+  "detail": "73/88"
+ },
+ {
+  "check": "dev classical exact count 42/88 = 0.477",
+  "result": "PASS",
+  "evidence": "experiments/classical_final_per_image.csv",
+  "detail": "42/88"
+ },
+ {
+  "check": "eval S1 exact 19/22, classical 12/22",
+  "result": "PASS",
+  "evidence": "experiments/final_eval_with_counts.csv",
+  "detail": ""
+ },
+ {
+  "check": "eval predicted/expected totals S1 22, classical 26, expected 25",
+  "result": "PASS",
+  "evidence": "experiments/final_eval_with_counts.csv",
+  "detail": ""
+ },
+ {
+  "check": "dev S1 over 1/88, under 14/88",
+  "result": "PASS",
+  "evidence": "experiments/s1_same_protocol_per_image.csv",
+  "detail": ""
+ },
+ {
+  "check": "dev classical inst P/R/F1 vs R_rev = 0.442/0.393/0.416",
+  "result": "PASS",
+  "evidence": "experiments/classical_final_per_image.csv",
+  "detail": "(42, 53, 65)"
+ },
+ {
+  "check": "dev classical macro IoU/Dice vs R_rev = 0.363/0.441",
+  "result": "PASS",
+  "evidence": "experiments/classical_final_per_image.csv",
+  "detail": "n=81"
+ },
+ {
+  "check": "eval agreement macro IoU/Dice vs S1 = 0.315/0.439 over 20",
+  "result": "PASS",
+  "evidence": "experiments/final_eval_with_counts.csv",
+  "detail": ""
+ },
+ {
+  "check": "eval instance TP/FP/FN vs S1 = 6/20/16",
+  "result": "PASS",
+  "evidence": "experiments/final_eval_with_counts.csv",
+  "detail": ""
+ },
+ {
+  "check": "14,400 candidates and 1803.6 s / 110 = 16.4 s per image",
+  "result": "PASS",
+  "evidence": "outputs/sam_candidates/audit.json, run.json",
+  "detail": ""
+ },
+ {
+  "check": "S1 frozen SAM checkpoint sha equals run.json and file on disk",
+  "result": "PASS",
+  "evidence": "configs/frozen/S1_v1.json",
+  "detail": ""
+ },
+ {
+  "check": "checkpoint on disk matches recorded sha256",
+  "result": "PASS",
+  "evidence": "models/sam_vit_b_01ec64.pth",
+  "detail": ""
+ },
+ {
+  "check": "frozen environment torch/python vs venv",
+  "result": "PASS",
+  "evidence": "configs/frozen/S1_v1.json",
+  "detail": "2.11.0+cu128 python 3.12.3"
+ },
+ {
+  "check": "report contains hash a6e46871795be95e",
+  "result": "PASS",
+  "evidence": "report/REPORT.pdf",
+  "detail": ""
+ },
+ {
+  "check": "report contains hash d8c827fe7d9d12ff",
+  "result": "PASS",
+  "evidence": "report/REPORT.pdf",
+  "detail": ""
+ },
+ {
+  "check": "report contains hash 6696e8cab3ba",
+  "result": "PASS",
+  "evidence": "report/REPORT.pdf",
+  "detail": ""
+ },
+ {
+  "check": "report contains '0.830 (73/88)'",
+  "result": "PASS",
+  "evidence": "report/REPORT.pdf",
+  "detail": ""
+ },
+ {
+  "check": "report contains '0.864 (19/22)'",
+  "result": "PASS",
+  "evidence": "report/REPORT.pdf",
+  "detail": ""
+ },
+ {
+  "check": "report contains '0.477 (42/88)'",
+  "result": "PASS",
+  "evidence": "report/REPORT.pdf",
+  "detail": ""
+ },
+ {
+  "check": "report contains '0.545 (12/22)'",
+  "result": "PASS",
+  "evidence": "report/REPORT.pdf",
+  "detail": ""
+ },
+ {
+  "check": "report contains '0.442/0.393/0.416'",
+  "result": "PASS",
+  "evidence": "report/REPORT.pdf",
+  "detail": ""
+ },
+ {
+  "check": "report contains '22 / 25'",
+  "result": "PASS",
+  "evidence": "report/REPORT.pdf",
+  "detail": ""
+ },
+ {
+  "check": "report contains '26 / 25'",
+  "result": "PASS",
+  "evidence": "report/REPORT.pdf",
+  "detail": ""
+ },
+ {
+  "check": "report contains '15 are empty/flagged: 13 dev, 2 eval'",
+  "result": "PASS",
+  "evidence": "report/REPORT.pdf",
+  "detail": ""
+ },
+ {
+  "check": "report contains '197 pass'",
+  "result": "PASS",
+  "evidence": "report/REPORT.pdf",
+  "detail": ""
+ },
+ {
+  "check": "every path with a directory referenced in README/reports exists",
+  "result": "PASS",
+  "evidence": "README.md, experiments/*.md, report/REPORT.pdf",
+  "detail": "{}"
+ }
+]

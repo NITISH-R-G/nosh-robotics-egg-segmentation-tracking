@@ -1,0 +1,8 @@
+start,end,expected_visible,rule,note
+240,480,2,L=Q;R=P,both eggs side by side; Q=left egg labelled Raw Egg at 336 (single annotator visual annotation)
+480,510,1,X<0.18=Q;else=P,hand lifts Q at far left; frames 480 and 504 ambiguous (Q partly hidden)
+510,558,1,ALL=P,hand carries Q to the right (hidden); P stationary at x~0.25
+558,648,2,L=P;R=Q,Q spinning at right; P at left (left/right order swapped w.r.t. the start)
+648,744,1,X<0.15=Q;else=P,hand carries Q back to far left; P stationary
+750,810,1,ALL=Q,hand picks up P and carries it right (blurred); Q stationary at far left; frame 744 and 810 ambiguous
+816,990,2,L=Q;R=P,P spinning at right; Q stationary far left

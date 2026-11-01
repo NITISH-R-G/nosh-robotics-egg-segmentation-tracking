@@ -1,0 +1,83 @@
+{
+ "opened": true,
+ "header": {
+  "frames": 760,
+  "fps": 24.0,
+  "w": 1280,
+  "h": 720
+ },
+ "decoded_frames": 760,
+ "frames_expected_from_interval": 760,
+ "box_edge_checks": 1256,
+ "box_edge_checks_failed": 0,
+ "box_source_rule": "frame fi shows boxes of sampled frame 240 + ((fi-240)//6)*6 (src/tracking/export_video.py)",
+ "duration_s": 31.666666666666668,
+ "recomputed": {
+  "T0_gated|dev": {
+   "frames_used": 63,
+   "expected": 107,
+   "detections": 103,
+   "missed": 4,
+   "extra": 0,
+   "id_switches": 3,
+   "distinct_ids": 4,
+   "matches_log": true,
+   "matches_evaluation_json": true
+  },
+  "T0_gated|heldout": {
+   "frames_used": 58,
+   "expected": 98,
+   "detections": 98,
+   "missed": 0,
+   "extra": 0,
+   "id_switches": 3,
+   "distinct_ids": 4,
+   "matches_log": true,
+   "matches_evaluation_json": true
+  },
+  "T0_gated|all": {
+   "frames_used": 121,
+   "expected": 205,
+   "detections": 201,
+   "missed": 4,
+   "extra": 0,
+   "id_switches": 3,
+   "distinct_ids": 4,
+   "matches_log": true,
+   "matches_evaluation_json": true
+  },
+  "T1_gated_plus_two_egg_prior|dev": {
+   "frames_used": 63,
+   "expected": 107,
+   "detections": 103,
+   "missed": 4,
+   "extra": 0,
+   "id_switches": 2,
+   "distinct_ids": 3,
+   "matches_log": true,
+   "matches_evaluation_json": true
+  },
+  "T1_gated_plus_two_egg_prior|heldout": {
+   "frames_used": 58,
+   "expected": 98,
+   "detections": 98,
+   "missed": 0,
+   "extra": 0,
+   "id_switches": 2,
+   "distinct_ids": 3,
+   "matches_log": true,
+   "matches_evaluation_json": true
+  },
+  "T1_gated_plus_two_egg_prior|all": {
+   "frames_used": 121,
+   "expected": 205,
+   "detections": 201,
+   "missed": 4,
+   "extra": 0,
+   "id_switches": 2,
+   "distinct_ids": 3,
+   "matches_log": true,
+   "matches_evaluation_json": true
+  }
+ }
+}

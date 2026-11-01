@@ -1,0 +1,4 @@
+config,images,labelled_eggs,selected,count_exact_rate,over_rate,under_rate,mean_abs_err,median_abs_err,max_abs_err,tp_lenient,tp_strict,bad_boundary_tp,false_positives,missed_eggs,precision_lenient,recall_lenient,precision_strict,recall_strict,images_with_fp,duplicate_pairs
+S1 alone,88,113,100,0.83,0.011,0.159,0.17,0.0,1,99,99,0,1,14,0.99,0.876,0.99,0.876,1,0
+S1 + pool-all (no appearance score),88,113,119,0.92,0.068,0.011,0.091,0.0,2,111,105,6,8,2,0.933,0.982,0.882,0.929,6,0
+S1 + appearance fallback (pre-registered rule),88,113,113,0.943,0.023,0.034,0.068,0.0,2,109,104,5,4,4,0.965,0.965,0.92,0.92,2,0

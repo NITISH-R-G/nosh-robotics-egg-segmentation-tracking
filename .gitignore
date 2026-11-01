@@ -1,0 +1,34 @@
+# environments, caches
+.venv/
+.venv-tools/
+**/venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.claude/
+# third-party data and weights are distributed separately (see README)
+data_raw/
+data_raw_dl/
+models/
+*.pth
+*.zip
+# scratch and bulky regenerated outputs; deliverable subsets are re-included below
+scratch/
+outputs/*
+!outputs/figures/
+!outputs/task1_sam_masks/
+!outputs/eval/
+outputs/eval/review/
+!outputs/video/
+outputs/video/*
+!outputs/video/evaluation.json
+!outputs/video/frame_stats.csv
+!outputs/video/tracking_*/
+outputs/video/tracking_*/*
+!outputs/video/tracking_*/tracks.csv
+outputs/video/examples/
+!outputs/classical/
+outputs/classical/*
+!outputs/classical/final_overlays/
+# the annotated video is shared via Google Drive, not git
+*.mp4

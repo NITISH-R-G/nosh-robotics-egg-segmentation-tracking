@@ -1,0 +1,18 @@
+{
+ "criteria": {
+  "min_new_egg_like": 5,
+  "max_new_false_positives": 1,
+  "min_clean_egg_share": 0.6
+ },
+ "summary": {
+  "new_detections": 13,
+  "new_egg_like": 10,
+  "new_clean_egg": 5,
+  "new_bad_boundary": 5,
+  "new_false_positives": 3,
+  "clean_share": 0.385,
+  "pool_candidates": 19,
+  "pool_egg_like": 12,
+  "criteria_met": false
+ }
+}

@@ -1,0 +1,5 @@
+image_a,image_b,decision,evidence
+not_damaged_78,not_damaged_27,group,"dHash dist 19/256, 32x32 corr 0.978; visual: same egg, same ash background, same framing (scratch/pairs.jpg row 1) - near-identical shot"
+not_damaged_156,not_damaged_163,group,"corr 0.939; visual: same egg on same blue bowl and tile, slightly different pose - burst of one capture session (pairs.jpg row 2)"
+not_damaged_156,not_damaged_149,no_group,"corr 0.910; visual: different egg/pose; 149 is on a steel tray; only the tile wall is shared (pairs.jpg row 3)"
+not_damaged_152,not_damaged_150,no_group,"corr 0.875; visual: 152 egg held in hand, 150 egg on steel tray; only the tile wall is shared (pairs.jpg row 4)"

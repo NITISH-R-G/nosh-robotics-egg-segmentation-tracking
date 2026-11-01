@@ -1,0 +1,2 @@
+# keep exact bytes: frozen configs record file hashes, so no line-ending conversion
+* -text

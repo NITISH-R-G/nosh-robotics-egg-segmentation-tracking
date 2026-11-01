@@ -1,0 +1,7 @@
+image_id,egg,candidate_index,verdict,box_iou_to_estimated_egg_box,why_selectors_reject,note
+not_damaged_11,leaf-occluded egg,4,suitable_ragged,0.95,"solidity 0.84 and ellipse-IoU 0.78 (leaf cutouts)",covers most of the egg; boundary ragged where leaves overlap
+not_damaged_12,leaf-occluded egg,9,suitable_partial,0.83,"solidity 0.79 and ellipse-IoU 0.74 (leaf cutouts)",covers the visible egg body; ragged left edge
+not_damaged_124,submerged egg,76,suitable_approximate,0.89,"predicted-IoU 0.67 and stability 0.58 (low SAM confidence)",good blob; a few stray specks below the egg
+not_damaged_135,submerged egg,41,suitable_approximate,0.80,"predicted-IoU 0.83 and stability 0.77",good blob; small specks at left edge
+not_damaged_145,submerged egg,40,suitable_approximate,0.77,"predicted-IoU 0.80 and stability 0.79",egg blob with a slightly boxy left edge
+not_damaged_144,back egg overlapped by front egg,7,suitable,0.94,"solidity 0.83 and ellipse-IoU 0.78 (crescent-shaped visible region)",correct visible region of the back egg

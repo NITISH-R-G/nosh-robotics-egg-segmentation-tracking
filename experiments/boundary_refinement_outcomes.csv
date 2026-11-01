@@ -1,0 +1,35 @@
+variant,case_id,orig_rating,refined_rating,outcome,review_id,group
+V1,C01,2,2,comparable,D11-c4,target
+V1,C02,2,2,comparable,D12-c9,target
+V1,C03,2,2,comparable,D13-c2,target
+V1,C04,3,3,comparable,D144-c7,target
+V1,C05,2,3,improved,D124-c76,target
+V1,C06,2,2,comparable,D135-c41,target
+V1,C07,1,1,comparable,D145-c40,target
+V1,C08,2,2,comparable,D42-c12,target
+V1,C09,2,2,comparable,D123-c9,target
+V1,C10,2,2,comparable,D125-c4,target
+V1,C11,2,2,comparable,D117-c23,uncertain(not counted)
+V1,C12,3,3,comparable,D141-c0,control
+V1,C13,3,3,comparable,D112-c1,control
+V1,C14,3,3,comparable,D144-c4,control
+V1,C15,2,2,comparable,D27-c1,control
+V1,C16,3,3,comparable,D134-c3,control
+V1,C17,3,3,comparable,D129-c1,control
+V2,C01,2,2,comparable,D11-c4,target
+V2,C02,2,2,comparable,D12-c9,target
+V2,C03,2,2,comparable,D13-c2,target
+V2,C04,3,3,comparable,D144-c7,target
+V2,C05,2,2,comparable,D124-c76,target
+V2,C06,2,2,comparable,D135-c41,target
+V2,C07,1,1,comparable,D145-c40,target
+V2,C08,2,2,comparable,D42-c12,target
+V2,C09,2,2,comparable,D123-c9,target
+V2,C10,2,2,comparable,D125-c4,target
+V2,C11,2,2,comparable,D117-c23,uncertain(not counted)
+V2,C12,3,3,comparable,D141-c0,control
+V2,C13,3,2,degraded,D112-c1,control
+V2,C14,3,3,comparable,D144-c4,control
+V2,C15,2,2,comparable,D27-c1,control
+V2,C16,3,3,comparable,D134-c3,control
+V2,C17,3,3,comparable,D129-c1,control

@@ -1,0 +1,85 @@
+{
+ "expected_images": 110,
+ "mask_files": 110,
+ "missing": [],
+ "unexpected": [],
+ "manifest_rows": 110,
+ "unreadable": [],
+ "malformed": [],
+ "dimension_mismatch": [],
+ "hash_mismatch_vs_manifest": [],
+ "differs_from_source_selector_output": [],
+ "empty": [
+  {
+   "id": "not_damaged_125",
+   "split": "dev"
+  },
+  {
+   "id": "not_damaged_10",
+   "split": "eval"
+  },
+  {
+   "id": "not_damaged_116",
+   "split": "dev"
+  },
+  {
+   "id": "not_damaged_117",
+   "split": "dev"
+  },
+  {
+   "id": "not_damaged_123",
+   "split": "dev"
+  },
+  {
+   "id": "not_damaged_124",
+   "split": "dev"
+  },
+  {
+   "id": "not_damaged_12",
+   "split": "dev"
+  },
+  {
+   "id": "not_damaged_13",
+   "split": "dev"
+  },
+  {
+   "id": "not_damaged_20",
+   "split": "dev"
+  },
+  {
+   "id": "not_damaged_42",
+   "split": "dev"
+  },
+  {
+   "id": "not_damaged_52",
+   "split": "dev"
+  },
+  {
+   "id": "not_damaged_135",
+   "split": "dev"
+  },
+  {
+   "id": "not_damaged_145",
+   "split": "dev"
+  },
+  {
+   "id": "not_damaged_11",
+   "split": "dev"
+  },
+  {
+   "id": "not_damaged_122",
+   "split": "eval"
+  }
+ ],
+ "non_empty": 95,
+ "empty_count": 15,
+ "empty_by_split": {
+  "dev": 13,
+  "eval": 2
+ },
+ "split_counts": {
+  "dev": 88,
+  "eval": 22
+ },
+ "pass": true
+}
