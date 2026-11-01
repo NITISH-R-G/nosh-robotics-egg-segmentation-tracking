@@ -180,7 +180,7 @@
   "detail": ""
  },
  {
-  "check": "report contains '197 pass'",
+  "check": "report contains '213 pass'",
   "result": "PASS",
   "evidence": "report/REPORT.pdf",
   "detail": ""

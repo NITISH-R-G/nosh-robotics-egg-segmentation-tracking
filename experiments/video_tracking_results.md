@@ -1,5 +1,7 @@
 # Task 4 video tracking: results (proxy evaluation; read `video_tracking_protocol.md` first)
 
+> **Update:** the selected tracker is now **T3b**; see the final section and `experiments/tracking_improvement_audit.md` / `tracking_improvement_results.md`. Everything above that section describes T0/T1 as originally recorded and is kept unchanged as history.
+
 Video: `egg_video.f399.mp4`, analysed frames 240-999, sampled every 6th frame (127 frames; 121 used after excluding 6 ambiguous). Log: `experiments/video_tracking_log.csv` (append-only; every row is a real run). Detector config sha `ebc9e1b18739`; trackers T0 `e53343c6fd5f`, T1 `32302c832602`.
 Everything below is a **proxy** evaluation against a hand-written, single-annotator, AI-assisted identity description (`data/video/identity_segments.csv`), made after viewing all sampled frames; it is not independent ground truth and not an accuracy claim.
 
@@ -41,3 +43,18 @@ Detector median 8.3 ms/frame at 960 px width; tracker 0.1 ms/frame. AV1 1080p de
 - Tracking evaluated at 4 Hz on one 31-second clip with two eggs; 3 occlusion events; one annotator; the annotation was written after seeing all frames (held-out frames are not unseen, only untuned).
 - The two-egg prior (T1) is an assumption of the scene, not a general tracker feature.
 - The detector is specific to white eggs on a dark table; on the 110-image dataset it would not be a valid method (use S1 or the documented classical baseline there).
+
+## Update: selected tracker T3b (added after the improvement round; T0-T3 records unchanged)
+| | T0 | T1 | T2 | T3 | T3b (selected) |
+|---|---|---|---|---|---|
+| distinct IDs for 2 eggs | 4 | 3 | 2 | 2 | 2 |
+| ID switches | 3 | 2 | 0 | 0 | 0 |
+| annotated occlusion gaps with identity retained | 0 of 3 | 1 of 3 | 3 of 3 | 3 of 3 | 3 of 3 |
+| complete-detection coverage, dev / held-out | 0.9626 / 1.0 | same | same | same | same |
+Numbers come from `experiments/video_tracking_log.csv` (T0, T1) and `experiments/video_tracking_improvement_log.csv` (T2, T3, T3b); per-frame outputs are the `tracks.csv` file inside each variant's folder under `outputs/video/` (T2-T3b add columns for kind, observed/predicted state and uncertainty).
+- **What changed:** partial egg fragments (rejected before by whole-egg shape filters) can update a track but never start one; constant-velocity Kalman prediction with predicted boxes kept separate from observed ones; Mahalanobis + IoU gated Hungarian association; ambiguous associations flagged; T3b bounds predicted boxes inside the frame (T3's predicted centre left the frame at 780-792; T3b was added after that failure).
+- **How to read the result:** 0 switches and 3 of 3 retained gaps on **this single clip**, against a **single-annotator, AI-assisted proxy annotation**, not human ground truth. The tracker was **developed after inspecting the critical pick-up sequence**; the held-out block 744-767 and every other sampled frame had been viewed. It is **not independent generalisation validation**, and the saturated metrics cannot rank T3b against other good trackers. T2 reaches the same numbers by a fragile mechanism (a long-lost track's grown uncertainty makes it the cheaper match at frame 750) and is not selected.
+- **Uncertainty preserved:** 4 observed associations are flagged uncertain, all with reason "ambiguous association": frame 540 (ID 1 fragment after the hand carry), 684 (ID 1 fragment), 750 (ID 2 fragment during the pick-up), 810 (ID 2 complete detection). ID 2 has **no observation from frame 762 to 804**; T3b displays a predicted box for the first 3 of those samples (762, 768, 774) and nothing afterwards (identity kept, position unknown); its re-appearance at 810 is one of the flagged associations. (The T3 variant predicted up to 792.)
+- **Fragment review:** all 21 fragments assigned to tracks lie on an egg; 9 unassigned fragments are a false detection of the white "Plane surface" caption arrow (frames 246-294); fragments cannot start tracks, so they have no effect on identities.
+- **Sensitivity (post-hoc, not used for selection):** T3b keeps 0 switches and 3 of 3 retained gaps in 16 of 17 one-factor settings; it fails at `q_acc = 0.1` (2 switches).
+- **Proposed demonstration video (not uploaded):** `outputs/video/final/egg_tracking_T3b_schematic.mp4`, footage-free; the original footage and the annotated original-footage video are not part of any public artifact.

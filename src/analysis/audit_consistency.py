@@ -55,7 +55,7 @@ def main():
     t = "".join(p.get_text() for p in fitz.open("report/REPORT.pdf"))
     for h in (s1["artifact_sha256"][:16], cl["artifact_sha256"][:16], cl["config_sha"]):
         chk(f"report contains hash {h}", h in t, "report/REPORT.pdf")
-    for s in ("0.830 (73/88)", "0.864 (19/22)", "0.477 (42/88)", "0.545 (12/22)", "0.442/0.393/0.416", "22 / 25", "26 / 25", "15 are empty/flagged: 13 dev, 2 eval", "197 pass"):
+    for s in ("0.830 (73/88)", "0.864 (19/22)", "0.477 (42/88)", "0.545 (12/22)", "0.442/0.393/0.416", "22 / 25", "26 / 25", "15 are empty/flagged: 13 dev, 2 eval", "213 pass"):
         chk(f"report contains '{s}'", s.replace(" ", "") in t.replace(" ", "").replace("\n", ""), "report/REPORT.pdf")
     # referenced paths
     docs = ["README.md", "experiments/video_tracking_results.md", "experiments/video_tracking_protocol.md", "experiments/final_evaluation_analysis.md", "experiments/final_evaluation_results.md", "experiments/final_evaluation_protocol.md", "experiments/classical_failure_analysis.md"]

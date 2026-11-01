@@ -1,0 +1,17 @@
+{
+ "sha256": "49d7f5645ad8c0dc329661c4894d96847626678e86462a90a3aaca8818910c19",
+ "bytes": 5327003,
+ "opened": true,
+ "header_frames": 760,
+ "decoded_frames": 760,
+ "fps": 24.0,
+ "dims_seen": [
+  [
+   1280,
+   720
+  ]
+ ],
+ "duration_s": 31.666666666666668,
+ "cursor_max_px_error": 0,
+ "cursor_frames_err_gt2": 0
+}
