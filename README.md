@@ -3,13 +3,33 @@
 Pretrained SAM segmentation of 110 egg images, a classical image-processing segmenter, an evaluation, and egg tracking in one video.
 **Read `report/REPORT.pdf` first** (it summarises everything below). All reference masks are SAM-derived pseudo-ground-truth and all counts/verdicts are AI-assisted and unverified by a human; no pixel-level human annotation exists.
 
+## Task 4: Egg Tracking Video
+
+**Video (Google Drive, public): https://drive.google.com/file/d/1UfviG9mgcDgNzNUQBNJYFNFK-SVJR7Bu/view?usp=sharing**
+
+The video shows the **previously saved output of the selected tracker T3b** (`outputs/video/tracking_T3b_kalman_partial_bounded/tracks.csv`) drawn on the original footage. **Tracking was not rerun to make it** (`src/tracking/render_t3b_overlay.py` reads only the saved CSV and the video). Facts: source frames **240 to 999 only** (760 of the clip's 1440 frames, 31.67 s), 1280x720, 24 fps; the tracker **updates at 4 Hz** (every 6th source frame) and the boxes are **held between updates at 24 fps**.
+
+![T3b tracking overlay, preview of source frames 498-617 (5 s excerpt of the Drive video, 640x360 GIF)](outputs/figures/task4_t3b_overlay_preview.gif)
+
+*Preview: a 5-second excerpt (source frames 498-617) of the same video, converted to a small GIF (`src/tracking/make_task4_preview_gif.py`). GitHub cannot play a Google Drive video inline, so open the link above for the full video.*
+
+| Overlay | Meaning |
+|---|---|
+| solid box, colour = track ID (ID 1 green, ID 2 orange) | observed complete (whole-egg) detection |
+| dashed box | observed partial detection (fragment) assigned to that identity |
+| dotted box, yellow text "PREDICTED, not observed" | predicted position, **not** a detection |
+| grey dotted box | unassigned fragment |
+| red label | uncertain identity association (4 flagged: frames 540, 684, 750, 810) |
+
+Limitations (details in `report/REPORT.pdf`, section 7): some intervals have no estimate for an ID (for example ID 2 has no observation at frames 780-804 and shows "NO ESTIMATE"; eggs carried in the hand are often unboxed); predicted positions can be inaccurate; identities are uncertain where flagged; the video covers frames 240-999 only; boxes lag the motion between 4 Hz updates. It visualises proxy-evaluated results on one 31-second clip (single-annotator, AI-assisted identity labels, not human ground truth) and does not show continuous tracking of every egg, perfect identity preservation or complete coverage of the video. The footage is third-party (see the licence section).
+
 ## Status (honest)
 | Task | State |
 |---|---|
 | 1. SAM masks for all 110 images | done: `outputs/task1_sam_masks/` (S1, 110 masks; 15 are empty because no candidate passed the conservative gates, flagged for review) |
 | 2. 80:20 leakage-aware split, classical method, experiment log | done: `data/split_manifest.csv` (88 dev / 22 eval), `experiments/classical_log.csv`, `configs/frozen/classical_v1.json` |
 | 3. Evaluation and analysis | done: `experiments/classical_results.md`, `experiments/classical_failure_analysis.md`, `experiments/final_evaluation_results.md`, `outputs/figures/` |
-| 4. Video tracking | done with a proxy-evaluated tracker, **T3b (selected)**: `experiments/video_tracking_results.md`, `experiments/tracking_improvement_audit.md`, `experiments/tracking_improvement_results.md`; footage-free schematic demo video of T3b (local, `src/tracking/schematic_video_v2.py`); **Google Drive link: not created yet** |
+| 4. Video tracking | done with a proxy-evaluated tracker, **T3b (selected)**: `experiments/video_tracking_results.md`, `experiments/tracking_improvement_audit.md`, `experiments/tracking_improvement_results.md`; annotated T3b video on the original footage (frames 240-999; Drive link in the Task 4 section above; `src/tracking/render_t3b_overlay.py`); a footage-free schematic of the same tracks can also be generated locally (`src/tracking/schematic_video_v2.py`) |
 
 Headline numbers (egg-count agreement with AI-assisted counts; not pixel accuracy): S1 0.830 dev / 0.864 eval exact; classical 0.477 dev / 0.545 eval. The classical method is a documented weak baseline (instance F1 0.42 on dev). Video (single 31-second clip, single-annotator AI-assisted proxy annotation, NOT human ground truth and NOT independent generalisation validation): the selected tracker T3b has 0 identity switches and 3 of 3 annotated occlusion gaps retained, versus T1's 2 switches and 1 of 3; complete-detection coverage is unchanged (0.963 dev / 1.000 held-out). T3b was designed after inspecting the critical pick-up sequence and the held-out block was viewed; 4 associations are flagged uncertain and one egg has no observation for frames 762-804 (see the results files).
 
@@ -51,6 +71,9 @@ Everything is run from the repository root with `PYTHONPATH=.`.
 .venv/Scripts/python -m src.tracking.improvement_report
 .venv/Scripts/python -m src.tracking.trajectory_plot_v2
 .venv/Scripts/python -m src.tracking.schematic_video_v2 outputs/video/tracking_T3b_kalman_partial_bounded/tracks.csv outputs/video/final/egg_tracking_T3b_schematic.mp4 "T3b tracker output (schematic)"
+# annotated footage video from the SAVED T3b tracks.csv (no tracking is run; needs the local video; refuses to overwrite an existing file) and its README preview GIF
+.venv/Scripts/python -m src.tracking.render_t3b_overlay
+.venv/Scripts/python -m src.tracking.make_task4_preview_gif
 ```
 Some entry points take command-line options (see `--help`). Re-running `final_eval` after the first run is blocked by `outputs/eval/RUN_RECORD.json` on purpose.
 
@@ -68,7 +91,7 @@ Some entry points take command-line options (see `--help`). Re-running `final_ev
 ## Dataset attribution and licences
 - Egg images: "egg" dataset by the Roboflow Universe user fire-bf7qe, https://universe.roboflow.com/fire-bf7qe/egg-vzhtr, licensed **CC BY 4.0**. The dataset is not redistributed here (download it yourself), but overlay sheets and example figures contain individual images from it (with contours drawn on them) and the masks are derived from them; they are shared under the same CC BY 4.0 attribution, with changes made by this project.
 - Segment Anything (Meta AI), Apache-2.0; the ViT-B checkpoint is downloaded separately.
-- Video: the YouTube clip Y4JyV94y2_A (MocomiKids, standard YouTube licence) is third-party content. Neither the clip nor any frame of it is included in this repository, and the annotated footage video is not published. The report shows a trajectory comparison figure generated from our own tracking CSVs instead of stills; the proposed demonstration is a footage-free schematic video of the T3b tracks (`python -m src.tracking.schematic_video_v2 outputs/video/tracking_T3b_kalman_partial_bounded/tracks.csv <out.mp4> <label>`); it has not been uploaded.
+- Video: the YouTube clip Y4JyV94y2_A (MocomiKids, standard YouTube licence) is third-party content. The original, unannotated clip is not included in this repository. The T3b annotated video on Google Drive and the short README preview GIF (`outputs/figures/task4_t3b_overlay_preview.gif`) do contain frames of that footage with tracking overlays; they are provided to assess this assignment only and remain subject to the original rights holder's terms. The report also shows a trajectory comparison figure generated from our own tracking CSVs (no footage), and a footage-free schematic video of the T3b tracks can be generated locally (`python -m src.tracking.schematic_video_v2 outputs/video/tracking_T3b_kalman_partial_bounded/tracks.csv <out.mp4> <label>`).
 - Original project code is released under the MIT License (`LICENSE`). The MIT licence does not cover the dataset (CC BY 4.0), SAM (Apache-2.0) or the third-party video.
 
 ## Split and leakage
@@ -78,4 +101,4 @@ Some entry points take command-line options (see `--help`). Re-running `final_ev
 Claude Code (Anthropic) wrote most of the code, tests, protocols and analysis documents under the author's direction, and produced the AI-assisted labels (egg counts, instance verdicts, scene categories, boundary ratings, video identity segments) by viewing images. Those labels are **not** human-verified and are named AI-assisted wherever they are used. The author must be able to explain the methods; the interview walk-through should not rely on this README alone. Metrics, thresholds and decisions are recorded in the logs; where a step failed or was withdrawn (premature selector freeze, contaminated split v1, rejected fallback and refinement experiments) the record says so.
 
 ## Known limitations
-No human ground truth; references derive from S1; 22 evaluation images; eval counts were labelled after seeing predicted counts; video evaluation is a single-annotator proxy on one clip (T3b designed after inspecting the critical sequence; held-out frames were viewed; not independent validation); the Google Drive video link does not exist yet.
+No human ground truth; references derive from S1; 22 evaluation images; eval counts were labelled after seeing predicted counts; video evaluation is a single-annotator proxy on one clip (T3b designed after inspecting the critical sequence; held-out frames were viewed; not independent validation); the Drive video shows saved results only (frames 240-999, 4 Hz updates held at 24 fps, intervals without estimates, four uncertain identity associations).
