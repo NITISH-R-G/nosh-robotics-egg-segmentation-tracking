@@ -19,7 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-This licence covers original project code and documents only. Third-party
-material keeps its own licence: the egg image dataset (CC BY 4.0, Roboflow
-Universe user fire-bf7qe), Segment Anything (Apache-2.0), and the YouTube video.
